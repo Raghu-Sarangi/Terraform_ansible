@@ -1,0 +1,13 @@
+vpc_cidr             = "172.16.0.0/16"
+vpc_name             = "AWSB57-UAT"
+owner                = "Sreeharsha"
+Main_Routing_Table   = "AWSB57-TERRAFORM-RT"
+env                  = "uat"
+keyname              = "LaptopKey"
+instancetype         = "t2.micro"
+imagename            = "ami-0cd59ecaf368e5ccf"
+azs                  = ["us-east-1a", "us-east-1b", "us-east-1c"]
+public_subnet_cidrs  = ["172.16.1.0/24", "172.16.2.0/24", "172.16.3.0/24", "172.16.4.0/24", "172.16.5.0/24", "172.16.6.0/24"]
+private_subnet_cidrs = ["172.16.10.0/24", "172.16.20.0/24", "172.16.30.0/24", "172.16.40.0/24", "172.16.50.0/24", "172.16.60.0/24"]
+ingress_ports        = ["22", "80", "443", "389", "8080", "22", "80", "9000", "9100"]
+egress_ports         = ["80", "443", "80", "443"]

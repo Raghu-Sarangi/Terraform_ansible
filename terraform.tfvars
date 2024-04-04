@@ -1,0 +1,13 @@
+vpc_cidr             = "10.57.0.0/16"
+vpc_name             = "AWSB57-IAAC"
+owner                = "Raghu"
+Main_Routing_Table   = "AWSB57-TERRAFORM-RT"
+env                  = "dev"
+keyname              = "DevOps"
+instancetype         = "t2.micro"
+imagename            = "ami-0cd59ecaf368e5ccf"
+azs                  = ["us-east-1a", "us-east-1b", "us-east-1c"]
+public_subnet_cidrs  = ["10.57.1.0/24", "10.57.2.0/24", "10.57.3.0/24", "10.57.4.0/24", "10.57.5.0/24", "10.57.6.0/24"]
+private_subnet_cidrs = ["10.57.10.0/24", "10.57.20.0/24", "10.57.30.0/24", "10.57.40.0/24", "10.57.50.0/24", "10.57.60.0/24"]
+ingress_ports        = ["22", "80", "443", "389", "8080", "22", "80", "9000", "9100"]
+egress_ports         = ["80", "443", "80", "443"]
