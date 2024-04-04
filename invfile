@@ -1,8 +1,8 @@
 [allservers]
-testserver01 ansible_port=22 ansible_host=54.147.210.239  remote_user=root private_key_file=/home/ubuntu/.ssh/ansiblekey.pem 
-testserver02 ansible_port=22 ansible_host=54.224.118.5  remote_user=root private_key_file=/home/ubuntu/.ssh/ansiblekey.pem
-testserver03 ansible_port=22 ansible_host=44.203.32.192  remote_user=root private_key_file=/home/ubuntu/.ssh/ansiblekey.pem
+testserver01 ansible_port=22 ansible_host=54.147.210.239  remote_user=ubuntu private_key_file=/home/ubuntu/.ssh/ansiblekey.pem 
+testserver02 ansible_port=22 ansible_host=54.224.118.5  remote_user=ubuntu private_key_file=/home/ubuntu/.ssh/ansiblekey.pem
+testserver03 ansible_port=22 ansible_host=44.203.32.192  remote_user=ubuntu private_key_file=/home/ubuntu/.ssh/ansiblekey.pem
 [pvtallservers]
-testserver01 ansible_port=22 ansible_host=10.57.1.194  remote_user=root private_key_file=/home/ubuntu/.ssh/ansiblekey.pem 
-testserver02 ansible_port=22 ansible_host=10.57.2.43 remote_user=root private_key_file=/home/ubuntu/.ssh/ansiblekey.pem
-testserver03 ansible_port=22 ansible_host=10.57.3.111 remote_user=root private_key_file=/home/ubuntu/.ssh/ansiblekey.pem
+testserver01 ansible_port=22 ansible_host=10.57.1.194  remote_user=ubuntu private_key_file=/home/ubuntu/.ssh/ansiblekey.pem 
+testserver02 ansible_port=22 ansible_host=10.57.2.43 remote_user=ubuntu private_key_file=/home/ubuntu/.ssh/ansiblekey.pem
+testserver03 ansible_port=22 ansible_host=10.57.3.111 remote_user=ubuntu private_key_file=/home/ubuntu/.ssh/ansiblekey.pem
