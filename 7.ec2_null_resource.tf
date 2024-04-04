@@ -1,20 +1,12 @@
 resource "null_resource" "cluster" {
   count = var.env == "dev" || var.env == "uat" || var.env == "prod" ? 3 : 1
-  provisioner "file" {
-    source      = "script.sh"
-    destination = "/tmp/script.sh"
-    connection {
-      type        = "ssh"
-      user        = "ubuntu"
-      private_key = file("DevOps.pem")
-      #host     = "${aws_instance.web-1.public_ip}"
-      host = element(aws_instance.web-1.*.public_ip, count.index)
-    }
-  }
+
   provisioner "remote-exec" {
     inline = [
-      "sudo chmod 777 /tmp/script.sh",
-      "sudo /tmp/script.sh",
+      # "sudo chmod 777 /tmp/script.sh",
+      # "sudo /tmp/script.sh",
+      "sudo apt update",
+      "sudo apt install -y unzip jq net-tools",
       "sudo useradd -m ansibleadmin --shell /bin/bash",
       "sudo mkdir -p /home/ansibleadmin/.ssh",
       "sudo chown -R ansibleadmin /home/ansibleadmin/",
@@ -35,6 +27,20 @@ resource "null_resource" "cluster" {
       host = element(aws_instance.web-1.*.public_ip, count.index)
     }
   }
+  provisioner "file" {
+    source      = "DevOps.pem"
+    destination = "/home/ubuntu/.ssh/ansiblekey.pem"
+    # source      = "script.sh"
+    # destination = "/tmp/script.sh"
+    connection {
+      type        = "ssh"
+      user        = "ubuntu"
+      private_key = file("DevOps.pem")
+      #host     = "${aws_instance.web-1.public_ip}"
+      host = element(aws_instance.web-1.*.public_ip, count.index)
+    }
+  }
+
 }
 
 

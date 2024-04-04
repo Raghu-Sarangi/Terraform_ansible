@@ -1,8 +1,8 @@
 [allservers]
-testserver01 ansible_port=22 ansible_host=54.167.82.182  ansible_user=ansibleadmin ansible_ssh_private_key_file=/home/ansibleadmin/.ssh/authorized_keys 
-testserver02 ansible_port=22 ansible_host=3.91.43.113  ansible_user=ansibleadmin ansible_ssh_private_key_file=/home/ansibleadmin/.ssh/authorized_keys
-testserver03 ansible_port=22 ansible_host=3.231.22.254  ansible_user=ansibleadmin ansible_ssh_private_key_file=/home/ansibleadmin/.ssh/authorized_keys
+testserver01 ansible_port=22 ansible_host=54.147.210.239  ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/.ssh/ansiblekey.pem 
+testserver02 ansible_port=22 ansible_host=54.224.118.5  ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/.ssh/ansiblekey.pem
+testserver03 ansible_port=22 ansible_host=44.203.32.192  ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/.ssh/ansiblekey.pem
 [pvtallservers]
-testserver01 ansible_port=22 ansible_host=10.57.1.205  ansible_user=ansibleadmin ansible_ssh_private_key_file=/home/ansibleadmin/.ssh/authorized_keys 
-testserver02 ansible_port=22 ansible_host=10.57.2.16 ansible_user=ansibleadmin ansible_ssh_private_key_file=/home/ansibleadmin/.ssh/authorized_keys
-testserver03 ansible_port=22 ansible_host=10.57.3.199 ansible_user=ansibleadmin ansible_ssh_private_key_file=/home/ansibleadmin/.ssh/authorized_keys
+testserver01 ansible_port=22 ansible_host=10.57.1.194  ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/.ssh/ansiblekey.pem 
+testserver02 ansible_port=22 ansible_host=10.57.2.43 ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/.ssh/ansiblekey.pem
+testserver03 ansible_port=22 ansible_host=10.57.3.111 ansible_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/.ssh/ansiblekey.pem
